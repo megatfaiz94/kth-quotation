@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bank Quotation KTHLegacy</title>
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#14213D">
+<meta name="theme-color" content="#72021A">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="KTH Quotation">
@@ -15,9 +15,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#14213D;--navy2:#1f2f55;--gold:#FCA311;--grey:#E5E5E5;--line:#3a4a72}
+:root{--navy:#14213D;--navy2:#1f2f55;--gold:#FCA311;--grey:#E5E5E5;--line:#a05a69;--bg:#72021A}
 *{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:var(--navy);color:#fff;font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-text-size-adjust:100%}
+html,body{margin:0;min-height:100%;background:var(--bg);color:#fff;font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-text-size-adjust:100%}
 button,input{font:inherit}
 .scr{min-height:100vh;display:none;align-items:center;justify-content:center;padding:20px;position:relative}
 .scr.on{display:flex}
@@ -99,7 +99,7 @@ function unwrap(pw){
 /* ---- injected ke dalam dashboard asal ---- */
 function boot(k){
   return '(function(){var Q=window.__QB,k="'+k+'";'+
-  'var ov=document.createElement("div");ov.style.cssText="position:fixed;inset:0;z-index:2147483000;background:#14213D;color:#fff;display:flex;align-items:center;justify-content:center;font:700 15px Plus Jakarta Sans,system-ui,sans-serif";ov.textContent="Membuka…";document.body.appendChild(ov);'+
+  'var ov=document.createElement("div");ov.style.cssText="position:fixed;inset:0;z-index:2147483000;background:#72021A;color:#fff;display:flex;align-items:center;justify-content:center;font:700 15px Plus Jakarta Sans,system-ui,sans-serif";ov.textContent="Membuka…";document.body.appendChild(ov);'+
   'var pwEl=document.getElementById("pw"),form=document.getElementById(k==="life"?"lform":"lockform");'+
   'pwEl.value=Q.pw;form.dispatchEvent(new Event("submit",{cancelable:true,bubbles:true}));'+
   'var t0=Date.now(),lk=document.getElementById("lock"),er=document.getElementById(k==="life"?"lerr":"pwerr");'+
