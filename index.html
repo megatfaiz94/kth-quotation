@@ -40,6 +40,15 @@ h1 span{color:var(--gold)}
 .opt .d{font-size:12.5px;color:#5b6478;margin-top:8px;line-height:1.45}
 .opt .go{display:inline-block;margin-top:12px;background:var(--gold);color:var(--navy);font-weight:800;font-size:13px;border-radius:10px;padding:8px 14px}
 .opt[disabled]{opacity:.55}
+.tnc{width:100%;max-width:520px;background:#fff;color:#14213D;border-radius:18px;padding:20px 18px 16px;text-align:left;border-bottom:5px solid #FCA311;box-shadow:0 8px 28px rgba(0,0,0,.3)}
+.tnc h2{margin:0 0 4px;font-size:18px;font-weight:800}
+.tnc .tsub{font-size:12px;color:#5b6478;margin:0 0 10px}
+.tcb{max-height:52vh;overflow:auto;border:1px solid #e3e6ee;border-radius:12px;padding:10px 14px;font-size:12.5px;line-height:1.55;background:#fafbfd;-webkit-overflow-scrolling:touch}
+.tcb ol{margin:0;padding-left:18px}.tcb li{margin:0 0 9px}.tcb b{color:#72021A}
+.tnc .agree{display:flex;gap:10px;align-items:flex-start;margin:12px 0;font-size:13px;font-weight:600;cursor:pointer}
+.tnc .agree input{width:20px;height:20px;margin-top:1px;accent-color:#72021A;flex:0 0 auto}
+.tnc .btn:disabled{opacity:.45;cursor:not-allowed}
+.tnc .lnk{display:block;width:100%;margin-top:8px;background:none;border:0;color:#5b6478;font-size:12.5px;font-weight:700;cursor:pointer;padding:8px}
 .toast{position:fixed;left:50%;bottom:40px;transform:translateX(-50%);background:#000;color:#fff;padding:9px 16px;border-radius:999px;font-size:13px;font-weight:600;opacity:0;transition:opacity .2s;pointer-events:none;max-width:90%;text-align:center}
 .toast.show{opacity:1}
 </style>
@@ -52,7 +61,7 @@ h1 span{color:var(--gold)}
     <input id="pw" type="password" autocomplete="current-password" placeholder="Password">
     <button class="btn" id="pwb" type="submit">Buka</button>
     <div class="err" id="lerr"></div>
-    <div class="foot">© <span class="yr"></span> Kaiser X Titan X Horizon (KTHLegacy). Hak cipta terpelihara.</div>
+    <div class="foot">© <span class="yr"></span> Kaiser X Titan X Horizon (KTHLegacy). Hak cipta terpelihara. · Version 1.2</div>
   </form>
 </div>
 <div class="scr" id="s-menu">
@@ -62,11 +71,27 @@ h1 span{color:var(--gold)}
     <p class="sub">Pilih bank quotation yang nak dibuka.</p>
     <button class="opt" data-k="life"><div class="t"><i>🤲</i>Hibah Takaful</div><div class="d">Bank quotation Hibah Takaful · umur 20–51 (ANB)</div><span class="go">Buka →</span></button>
     <button class="opt" data-k="med"><div class="t"><i>🏥</i>Medical Card</div><div class="d">Bank quotation Medical Card · umur 1–60 (ANB)</div><span class="go">Buka →</span></button>
-    <div class="foot">© <span class="yr"></span> Kaiser X Titan X Horizon (KTHLegacy). Hak cipta terpelihara.</div>
+    <div class="foot">© <span class="yr"></span> Kaiser X Titan X Horizon (KTHLegacy). Hak cipta terpelihara. · Version 1.2</div>
   </div>
 </div>
+<div class="scr" id="s-tnc"><div class="tnc">
+  <h2>Terma &amp; Syarat Penggunaan</h2>
+  <p class="tsub">Sila baca dan setuju sebelum teruskan.</p>
+  <div class="tcb" id="tcb"><ol>
+    <li><b>Kegunaan dalaman sahaja.</b> Bank quotation ini hanya untuk consultant KTHLegacy yang diberi akses. Jangan kongsi pautan atau password kepada sesiapa di luar pasukan. Akses boleh ditarik balik pada bila-bila masa.</li>
+    <li><b>Dilarang screenshot / rakam skrin.</b> Jangan screenshot, rakam, salin atau sebarkan skrin dashboard (termasuk jadual penuh semua pelan dan rujukan Takaful Operator) kepada klien atau pihak lain. Hantar kepada klien hanya melalui quotation yang dijana (PNG/PDF/teks WhatsApp).</li>
+    <li><b>Password.</b> Password bertukar secara berkala. Jangan tulis, simpan atau hantar password dalam chat umum. Jika password terdedah, maklumkan admin serta-merta.</li>
+    <li><b>Anggaran sahaja.</b> Semua angka adalah anggaran daripada bank quotation dalaman, bukan tawaran atau jaminan. Kelulusan tertakluk underwriting serta terma &amp; syarat sijil takaful. Rujuk ilustrasi rasmi operator sebelum hantar kepada klien.</li>
+    <li><b>Patuh syariah &amp; peraturan.</b> Ikut garis panduan syariah, SC dan BNM. Jangan janji pulangan. Nilai tunai ialah anggaran dan tidak dijamin. Semak compliance sebelum guna testimoni.</li>
+    <li><b>Data klien.</b> Nama, tarikh lahir dan nota klien hanya untuk menyediakan quotation. Tekan “Reset klien” selepas setiap klien. Jangan simpan atau kongsi data klien tanpa kebenaran (PDPA 2010).</li>
+    <li><b>Hak cipta.</b> © Kaiser X Titan X Horizon (KTHLegacy). Salah guna, kebocoran atau penyebaran tanpa kebenaran boleh membawa kepada tindakan tatatertib atau undang-undang.</li>
+  </ol></div>
+  <label class="agree"><input type="checkbox" id="tcok"><span>Saya faham dan bersetuju dengan terma di atas.</span></label>
+  <button class="btn" id="tcgo" type="button" disabled>Setuju &amp; Teruskan</button>
+  <button class="lnk" id="tcno" type="button">Batal</button>
+</div></div>
 <div class="toast" id="toast"></div>
-<script id="wr" type="application/json">{"n":200000,"w":[{"p":1,"s":"TnM31fZ/leX30RM0Hx2K/A==","i":"VIM3fh+l4Go+ppbE","c":"b2Mrr6ct2Pa3CkJaf/gWajP4IwR7xsVefS88X4bzvNkpPQ7butvKUs8axhPEg9nz"},{"p":2,"s":"NpoZVsEqj4BUdLi4u0e3lQ==","i":"P65w1PXEiP/RpiAx","c":"8hUbw7nY5IqtPOnmOb0h5buMN/STvs+RcANKlYUeCRjpaiD4jqp2nTU6+qSF3jfG"},{"p":3,"s":"Oz7Gh7Kk3A4UCWwACIayfQ==","i":"zxjlwNd6AjS3mXov","c":"jV1lzcxnaB/GVUSqvILjc3REuVGaS8fdhnKt6Gl2IofC6a2nh8pUFuqpSdZo/pdM"},{"p":4,"s":"fC8ND5Mgb7nVxy6Be4PvSA==","i":"GIXEqh5oaUZ5GW0R","c":"29RLRDOb3497BVwZ3N5OmC0efyRAD1kaWlVaFGjaGwPpae+prNWFANX2Ed5Jl5xn"},{"p":5,"s":"kLczI5BNeOLTu5bv/DQhOw==","i":"XEdzfoj4gv2fD05q","c":"ksvAnvtUzO0zOSfDOFjx0ebBH03YexM0OJDxlps3h5lZhxLjssHMoEGRr42penXR"},{"p":6,"s":"yHf9hjfvNLkpvHCXgiyoIw==","i":"eefgaVt4wxFqzqK1","c":"6LKWKWQVYv6S8mTYIhE0AqjuuwGEKFNkO89FgG1qleCO+vmvpWIWDC+fafMM+hB/"},{"p":7,"s":"TrS+CZU1sA6gp5fd2twO3g==","i":"VeHRTQidX/V9Jq3o","c":"QTYrbHvPWhzIkW9rkR/PB1o1yZ57Gk832fRdtzlk1dhZd/wxDqF9HlXaCSWCpQrD"},{"p":8,"s":"Xlp0GTwzbgJQdormTpl3ew==","i":"IsVjASAF0F4PSW0t","c":"HIt8Ys7SbYCn4bkJ0gb54zSabhELiBOeQdMhhmulhn4ol0baAn1P/C6CU7rf77uD"},{"p":9,"s":"UjSzxl9jyCzKAN7nUy8WKg==","i":"v1Z4QkFMRAr/OsH9","c":"4nk7MOFeaOV1kMvkPBqCdGhqORP1smhQQ8gdQdhGgx50pnH62uHXSTdGj19FOElN"},{"p":10,"s":"pOq2+yxfGJvUiphfOGX+wg==","i":"Fp9pxcRsHDHUFI2S","c":"OJuSP68NMSFKLnog9zhbhNtM4j3ip0PyDT70EgW4eoCiC9LRFtWr/MsrfMmCjzBj"},{"p":11,"s":"VWN+b/d0c2lxyHnyWefYLw==","i":"xK1m7ZLJgh1cd2XX","c":"heIx+yvQCyIM33lWSYRc+tnxkHBRUz9yfgtNwBps1FRqaDsCd6iVGtwN2fCC3uuS"},{"p":12,"s":"GKB4ADsiSLYLXSM8tT/xiQ==","i":"KePZ5D5gG36UmEuL","c":"KrHZlYZZc+KLB5pi6VFAwhRfohobC1EQSRFoh6X6xWFFNa2umIh6PMbjMTr1BWZB"},{"p":13,"s":"5WBs8cT/KAHjqki/GSvgwQ==","i":"NTkAGtIuY6ivm1E5","c":"KYWrhzICxLrVZK3NbDsIKR1Ksn4pwlnW1rZTE4bL6+qlcoltToduy2eay9crmDas"},{"p":14,"s":"L2LO0Kgva4+l5Pvg/Wd67g==","i":"gV+Mmn4yOnE8Etgu","c":"H7WoUY33m5pqX7WuoIsHSgswBhNjlyRq5TAXVfD7ULqhzHrMkUvvJWOB0hFko2CR"},{"p":15,"s":"cZsXnAm13wWRrrdm5S4kpA==","i":"b8mDvC01MTUKHLSr","c":"3SsZm/bJDsEwVOjC52W3XcEyrGji5zpeIWo6n3jWPz/bCveVwskbNt6yhWuZVx1N"},{"p":16,"s":"srgN2keDRwswzHUOEpGazQ==","i":"2bzjDsBeDzTThwT1","c":"rUtKf0aj2L4xlXNKUPf/DaW1mv7QWnelC0oqhEUGFzY4RoTtUgIZm5G7W8qqHL1L"},{"p":17,"s":"xDSaIiEaVK3YRa5WkYDpPg==","i":"Cd533FQbLuOgTqYp","c":"CotYOJKoa17AGfcqmS41Y1Cr/F90m/di88lAikucCCpm77Pb9w1XZKBQ43CUixPJ"},{"p":18,"s":"wBoyznTyIXT/HSPUHFfUIQ==","i":"5kXZVxEyyN8ShaVd","c":"4O0JzvoLMn18Crpa7aQ3jTDA3aG5Zgkrn7795E2igmbm4uVg79IQ8D7VFmEOrWVf"},{"p":19,"s":"PbkvnWXEdT75P6Cwh++u/g==","i":"X2kzXrlyFT7Xhw/e","c":"Kw5wAUS2oUokw7Ciahr2jIeBax363bul+UBcBsGkZJRLcrKl63+Nqi8mamHBvhkn"},{"p":20,"s":"DyVlFunj1h4WwgSScDyhRw==","i":"p3tMd4yiozzBsX6K","c":"rMCpEWrHqmiYxMOUebDmlqAiId93lYUrmDsybtqa3819K1nUOFRSQc67N7ee8ZEr"},{"p":21,"s":"lP/cTrxqduhjK1w5sTeB+g==","i":"Y41uKGcAc9HPfNiq","c":"8YoRnBOOSpNCF/UhqnCQXbhY9mCTMrS5aTte3QJEQtFLa/9egZRrJkYAxWjMWs8W"},{"p":22,"s":"DEb/yvyg8I9tqN9wfx9uUA==","i":"2Ib5iYAKvoRZP2Nj","c":"C3vQKvr9AFxu6Y+XJsfMMr75TJgjXx37D3NolE/aBendWGtplE06pkvWsWDZuP0R"},{"p":23,"s":"7KUX4tidnZIC+XDAQzxrRg==","i":"F/Isw7G5wH3hplY8","c":"KsvT49OKCRSW6VH8lD1mPzFxmJxQ816eYIv8TJCDNXWeZgNLKgZNkxkA8EtU+1wV"},{"p":24,"s":"a7K/Ci6wczNslMqaQ3UVSQ==","i":"jPAkpk2FbwMbwcS7","c":"XU0epeTmbVk9M6rKtAkKEyt/zdlxdq8HfrgdpiHE0e5A5rhxJHfNh08nzCsiUAlj"},{"p":25,"s":"uXn12CZbjyn2/xObtE0eNA==","i":"bdmUswPHiXuzKDEp","c":"4HQ5dzhtsnuXnRPYn/VJib77FnQ1yEifQAbcTr1F++1HBkdBNE8rP+6hdHY4Cw0m"}]}</script>
+<script id="wr" type="application/json">{"n":200000,"w":[{"p":1,"s":"iqU5cpoBDph3lCk8FEG3WQ==","i":"O/WatGa1DITL07rB","c":"Dq0eH/mMFTZ+xnfGLf3z8PWSz9LnmIGXXLU/ZGrAu4a639EDe+oohmiVpaJxszwI"},{"p":2,"s":"7MmYsIy3qFjFITLCT6DNbg==","i":"kSoHhE19DT82pmp5","c":"lNXMoyWBuExpyEwHClF835feknnVjvwWbWuxY4ZJH733UKuroGQpDMYG3wf3MEPF"},{"p":3,"s":"Ufz8RuWN9BjhWB/k9K5hGQ==","i":"JcSy5F7OFWB1EJxE","c":"HwUhPa3Iyi1vd/zI48MhWN7fyLHoLzTNBzpWgKCRdL+J1/QL9OQfdy/Tn6EzqqJF"},{"p":4,"s":"FNrOLXbL1kWXxFs0VZlD6Q==","i":"XenxpZVJ4sniDBve","c":"MUxXprKeoXC7UIoqo4j+Ik5pFmsQbLNWOzn1hksrZAW/P7P6o/wmYIwB2fandSks"},{"p":5,"s":"RBrzSQsbVaSK4hBK+4Ktyg==","i":"hAs7lRnUBptsGwmX","c":"vNJTqvyKTkSD0DBaUUHfa+DGZ9qSdDIFBgD0h6Ba3hC/gGki+5N/ZYso83v16UOd"},{"p":6,"s":"EWYPraiR8jMXu/kg3XBxgg==","i":"DHlRHvKNjabFXDPV","c":"0P7JY+Fx/WIfFuj4ND7cuCCVU2WiN2yDQo9KwmnpG5PBSSs+iWP2DKMZ2/JbdEHE"},{"p":7,"s":"Fs1+9pTe8AL+KlPQ2oF33w==","i":"q71ubLrTsHavEQna","c":"uNNCuRnt5VkXZZiaz/fkC58B3qZaHS88KRX59FwQMgoxpoJb+a262tVhcMQf086h"},{"p":8,"s":"Tsrw7UTVe3vZBo5YgiwLUQ==","i":"wfvrrw5/GyfZDdCw","c":"AH1y+iMIOKwHSdrTsMu3WMTSsZNUxYnU6gElG19L27XpmySRjZxxW2ASSC6rnD3N"},{"p":9,"s":"AtQt46LpBgoJCIgDB/pxIg==","i":"5le0YV6IHpaDzR5+","c":"IthjhwftmTGJjsQ89HnKD1w1exi9ZB94zbxNocB6Zhra5MQqLW9y3t873L9l2RN7"},{"p":10,"s":"XoJS6HEQ0V/nuYqHPi0Yxw==","i":"o6gz4VyLhvHWvf8/","c":"Q/2C4vZau5eUFSymzIbBuHwdfnfP8SIpf11gxJjjfALvoPa/o9llekIb+nIRuyrZ"},{"p":11,"s":"2uBoIwVDm2Ve0u7LSE3Apw==","i":"L2zNVYTplKbsR7ls","c":"ndImz7BwBrorN29vuiDpKPGYj9xY6m80WdTdcbIsa/xxskadEZO2po1kF9bybOjk"},{"p":12,"s":"ifMHRb25765Zc4wdXmwaBw==","i":"fPI+iZZPCGdFD5RM","c":"RhjBam+DTwL+ajLs7E577kuNv7DWYYsjmDY6N2i3OdJKnbPaJMZhUNB8QBYBVuNx"},{"p":13,"s":"npBT+UoNb4/qShY7j1/3pg==","i":"l97l+Jh2u9Humg54","c":"lpZAKGDhe27ya3AwOWP7lNSzcAJuT2AidNTeb3kb1tfMXrbqpgN4gIiFCV29rlZP"},{"p":14,"s":"5Biabf9e8Flc9avlvhhCdA==","i":"hRQtAl1G0IR5s2No","c":"fO8sAEDCrRXPyJJP0Itn7s6OYPZ0pfuSqrLRx4MWmTWpha8ilEWZXxs2NAupo03e"},{"p":15,"s":"LBv3Vj9Ud1RE0OUK1kEoVw==","i":"1K7ETpygalDA7uEe","c":"skUbT21tB3GdZ8MKI3aKlpst986UyjMuH7PYXobXXw46JgOoWY64cC1kgJan7h/s"},{"p":16,"s":"coovjPx77pt+k3WHibKebA==","i":"7tOaaQqx8FtPSF/e","c":"1TIXcJzZRl3W8SRv3ENMdU9cK31KHJIXCmR2klUTqfugmjjD8qq4L83sWOoUaRKy"},{"p":17,"s":"ZorUa2rTRl8vy0/yRlX3Vw==","i":"/sVr8JQ7SbkCc3bk","c":"i2GnZKxs1Tgr46/IdwXbPQL48D2MfgWbxKJ4FR9Wefp16e0zwh2NgEwmwls5WN/P"},{"p":18,"s":"h/2TPjyYVyUxglr3SBGjAg==","i":"hPZJTV5ZLgnPUJKe","c":"ovy/d9tPVxNDuWM1SIPHGMhkGPNh1Y971nv7E3/MH5u3mStAew27KoW4XIpCj/rs"},{"p":19,"s":"pg9sim5J9g4YWisw2j+k+w==","i":"bjlXMbilnUvU73dQ","c":"ek2Z3wWSN8pEukMmag3dtu2GPsGIX1NMar88lWYI2r1KWEYPGgg3qIr2bnkuzuv0"},{"p":20,"s":"+pkUhW41DcSEuF9j0Qf8Tw==","i":"Z+EuNvcOdwGtMeFb","c":"QO4Gx85wrLvb+UyYEQFLUSYfV/1sJd8Tn6ALikfmlqfC0qigw6iHrO8eoPzTCKVO"},{"p":21,"s":"MedyjhIfXdvOCm60jV7GaA==","i":"f8YNQ4XtEeDhhrlG","c":"1/i994b5iggq82SMXwgHH+l49uYcd8ztBux/scnhPBx6zBat8AUN3b0i8M+aTxyJ"},{"p":22,"s":"xeeNYf/WJWE8uIVZKtQ5WA==","i":"/S1VgU7muvk3V8l+","c":"flsOhqwKynoSs/5TMgyZmpWV0HuzF0bJniWNNj4sxTgPNelU41xIR1WT0GQ1vYab"},{"p":23,"s":"yu0bbF9qDBm8dR/2057eNg==","i":"fyJ6vhCM2flgf6tN","c":"XhwJ/hKQwXvW+8/OPdrVqx6ejszhk2c8qpOAaXvMFzt/uICurIjGT1ro6tmTcSec"},{"p":24,"s":"PlqAi8vYZkKVfqRQ/zy82A==","i":"7FRB25etExR5pzTv","c":"9SgXrvtgcIK13bxvJR4IHpqAaC+fdeM2sclzOPhn45m89smHtpdHZx2zKZfyZ/4a"},{"p":25,"s":"lUr4JQuqopf9k1OeBI56cA==","i":"w9LYYtwfS8wdbsu4","c":"8qmnz2l06jAJyxAlrYBwrHJkAQlM7jIoRVbPsqf4kd5GfkRCZqbc17qvWiIfKOhz"}]}</script>
 <script>
 (function(){
 var Q=window.__QB=window.__QB||{pw:null,ok:{},files:null,shell:null,ready:null};
@@ -132,12 +157,16 @@ $('#lform').addEventListener('submit',function(e){
   var pw=$('#pw').value;if(!pw)return;
   $('#pwb').disabled=true;$('#pwb').textContent='Membuka…';$('#lerr').textContent='';
   Q.ready.then(function(){return unwrap(pw);}).then(function(r){
-    if(r.s){Q.pw=r.s;Q.ok={life:true,med:true};fails=0;$('#pw').value='';menu();}
+    if(r.s){Q.pw=r.s;Q.ok={life:true,med:true};fails=0;$('#pw').value='';tnc();}
     else if(r.none){$('#lerr').textContent='Password untuk tempoh ini belum disediakan. Hubungi admin.';}
     else{fails++;if(fails>=5)waitUntil=Date.now()+30000*Math.pow(2,fails-5);$('#lerr').textContent='Password salah'+(fails>=5?' \u2014 cuba lagi sebentar':'');}
   },function(){$('#lerr').textContent='Gagal muat data. Cuba refresh halaman.';}).then(function(){$('#pwb').disabled=false;$('#pwb').textContent='Buka';});
 });
 function menu(){show('s-menu');}
+function tnc(){$('#tcok').checked=false;$('#tcgo').disabled=true;$('#tcb').scrollTop=0;show('s-tnc');}
+$('#tcok').onchange=function(){$('#tcgo').disabled=!this.checked;};
+$('#tcgo').onclick=function(){if($('#tcok').checked)menu();};
+$('#tcno').onclick=function(){Q.pw=null;Q.ok={};$('#tcok').checked=false;show('s-lock');setTimeout(function(){$('#pw').focus()},50);};
 document.querySelectorAll('.opt').forEach(function(b){b.onclick=function(){
   var k=b.dataset.k;
   if(!Q.ok[k]){toast('Password ini tak sepadan dengan '+(k==='life'?'Hibah Takaful':'Medical Card'));return;}
