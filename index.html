@@ -49,6 +49,19 @@ h1 span{color:var(--gold)}
 .tnc .agree input{width:20px;height:20px;margin-top:1px;accent-color:#72021A;flex:0 0 auto}
 .tnc .btn:disabled{opacity:.45;cursor:not-allowed}
 .tnc .lnk{display:block;width:100%;margin-top:8px;background:none;border:0;color:#5b6478;font-size:12.5px;font-weight:700;cursor:pointer;padding:8px}
+.pro{width:100%;max-width:520px;background:#fff;color:#14213D;border-radius:18px;padding:20px 18px 16px;text-align:left;border-bottom:5px solid #FCA311;box-shadow:0 8px 28px rgba(0,0,0,.3);max-height:94vh;display:flex;flex-direction:column}
+.pro h2{margin:0 0 2px;font-size:18px;font-weight:800}
+.pro .tsub{font-size:12px;color:#5b6478;margin:0 0 10px}
+.pb{overflow:auto;-webkit-overflow-scrolling:touch;margin:0 -4px;padding:0 4px}
+.pto{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:#72021A;margin:12px 0 6px}
+.pto:first-child{margin-top:0}
+.pit{border:1px solid #e3e6ee;border-left:5px solid #FCA311;border-radius:12px;padding:10px 12px;margin-bottom:8px;background:#fafbfd}
+.pit .pn{font-weight:800;font-size:14.5px;display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.pit .bd{flex:none;font-size:10.5px;font-weight:800;border-radius:999px;padding:2px 8px;background:#14213D;color:#FCA311;white-space:nowrap}
+.pit .bd.hot{background:#FCA311;color:#14213D}
+.pit ul{margin:6px 0 0;padding-left:17px;font-size:12.5px;line-height:1.5}
+.pnote{font-size:11px;color:#5b6478;line-height:1.5;margin:8px 0 0}
+.pro .btn{margin-top:12px}
 .toast{position:fixed;left:50%;bottom:40px;transform:translateX(-50%);background:#000;color:#fff;padding:9px 16px;border-radius:999px;font-size:13px;font-weight:600;opacity:0;transition:opacity .2s;pointer-events:none;max-width:90%;text-align:center}
 .toast.show{opacity:1}
 </style>
@@ -61,7 +74,7 @@ h1 span{color:var(--gold)}
     <input id="pw" type="password" autocomplete="current-password" placeholder="Password">
     <button class="btn" id="pwb" type="submit">Buka</button>
     <div class="err" id="lerr"></div>
-    <div class="foot">© <span class="yr"></span> Kaiser X Titan X Horizon (KTHLegacy). Hak cipta terpelihara. · Version 1.2</div>
+    <div class="foot">© <span class="yr"></span> Kaiser X Titan X Horizon (KTHLegacy). Hak cipta terpelihara. · Version 1.3</div>
   </form>
 </div>
 <div class="scr" id="s-menu">
@@ -71,7 +84,7 @@ h1 span{color:var(--gold)}
     <p class="sub">Pilih bank quotation yang nak dibuka.</p>
     <button class="opt" data-k="life"><div class="t"><i>🤲</i>Hibah Takaful</div><div class="d">Bank quotation Hibah Takaful · umur 20–51 (ANB)</div><span class="go">Buka →</span></button>
     <button class="opt" data-k="med"><div class="t"><i>🏥</i>Medical Card</div><div class="d">Bank quotation Medical Card · umur 1–60 (ANB)</div><span class="go">Buka →</span></button>
-    <div class="foot">© <span class="yr"></span> Kaiser X Titan X Horizon (KTHLegacy). Hak cipta terpelihara. · Version 1.2</div>
+    <div class="foot">© <span class="yr"></span> Kaiser X Titan X Horizon (KTHLegacy). Hak cipta terpelihara. · Version 1.3</div>
   </div>
 </div>
 <div class="scr" id="s-tnc"><div class="tnc">
@@ -90,8 +103,15 @@ h1 span{color:var(--gold)}
   <button class="btn" id="tcgo" type="button" disabled>Setuju &amp; Teruskan</button>
   <button class="lnk" id="tcno" type="button">Batal</button>
 </div></div>
+<div class="scr" id="s-promo"><div class="pro">
+  <h2>🔔 Grab these opportunities</h2>
+  <p class="tsub">Reminder promo takaful semasa — jangan terlepas.</p>
+  <div class="pb" id="pbody"></div>
+  <p class="pnote">Reminder dalaman untuk consultant. Syarat, kelayakan &amp; underwriting tertakluk kepada Takaful Operator — rujuk circular / ilustrasi rasmi sebelum cadang kepada klien. Jangan janji kelulusan.</p>
+  <button class="btn" id="pgo" type="button">Faham, teruskan</button>
+</div></div>
 <div class="toast" id="toast"></div>
-<script id="wr" type="application/json">{"n":200000,"w":[{"p":1,"s":"iqU5cpoBDph3lCk8FEG3WQ==","i":"O/WatGa1DITL07rB","c":"Dq0eH/mMFTZ+xnfGLf3z8PWSz9LnmIGXXLU/ZGrAu4a639EDe+oohmiVpaJxszwI"},{"p":2,"s":"7MmYsIy3qFjFITLCT6DNbg==","i":"kSoHhE19DT82pmp5","c":"lNXMoyWBuExpyEwHClF835feknnVjvwWbWuxY4ZJH733UKuroGQpDMYG3wf3MEPF"},{"p":3,"s":"Ufz8RuWN9BjhWB/k9K5hGQ==","i":"JcSy5F7OFWB1EJxE","c":"HwUhPa3Iyi1vd/zI48MhWN7fyLHoLzTNBzpWgKCRdL+J1/QL9OQfdy/Tn6EzqqJF"},{"p":4,"s":"FNrOLXbL1kWXxFs0VZlD6Q==","i":"XenxpZVJ4sniDBve","c":"MUxXprKeoXC7UIoqo4j+Ik5pFmsQbLNWOzn1hksrZAW/P7P6o/wmYIwB2fandSks"},{"p":5,"s":"RBrzSQsbVaSK4hBK+4Ktyg==","i":"hAs7lRnUBptsGwmX","c":"vNJTqvyKTkSD0DBaUUHfa+DGZ9qSdDIFBgD0h6Ba3hC/gGki+5N/ZYso83v16UOd"},{"p":6,"s":"EWYPraiR8jMXu/kg3XBxgg==","i":"DHlRHvKNjabFXDPV","c":"0P7JY+Fx/WIfFuj4ND7cuCCVU2WiN2yDQo9KwmnpG5PBSSs+iWP2DKMZ2/JbdEHE"},{"p":7,"s":"Fs1+9pTe8AL+KlPQ2oF33w==","i":"q71ubLrTsHavEQna","c":"uNNCuRnt5VkXZZiaz/fkC58B3qZaHS88KRX59FwQMgoxpoJb+a262tVhcMQf086h"},{"p":8,"s":"Tsrw7UTVe3vZBo5YgiwLUQ==","i":"wfvrrw5/GyfZDdCw","c":"AH1y+iMIOKwHSdrTsMu3WMTSsZNUxYnU6gElG19L27XpmySRjZxxW2ASSC6rnD3N"},{"p":9,"s":"AtQt46LpBgoJCIgDB/pxIg==","i":"5le0YV6IHpaDzR5+","c":"IthjhwftmTGJjsQ89HnKD1w1exi9ZB94zbxNocB6Zhra5MQqLW9y3t873L9l2RN7"},{"p":10,"s":"XoJS6HEQ0V/nuYqHPi0Yxw==","i":"o6gz4VyLhvHWvf8/","c":"Q/2C4vZau5eUFSymzIbBuHwdfnfP8SIpf11gxJjjfALvoPa/o9llekIb+nIRuyrZ"},{"p":11,"s":"2uBoIwVDm2Ve0u7LSE3Apw==","i":"L2zNVYTplKbsR7ls","c":"ndImz7BwBrorN29vuiDpKPGYj9xY6m80WdTdcbIsa/xxskadEZO2po1kF9bybOjk"},{"p":12,"s":"ifMHRb25765Zc4wdXmwaBw==","i":"fPI+iZZPCGdFD5RM","c":"RhjBam+DTwL+ajLs7E577kuNv7DWYYsjmDY6N2i3OdJKnbPaJMZhUNB8QBYBVuNx"},{"p":13,"s":"npBT+UoNb4/qShY7j1/3pg==","i":"l97l+Jh2u9Humg54","c":"lpZAKGDhe27ya3AwOWP7lNSzcAJuT2AidNTeb3kb1tfMXrbqpgN4gIiFCV29rlZP"},{"p":14,"s":"5Biabf9e8Flc9avlvhhCdA==","i":"hRQtAl1G0IR5s2No","c":"fO8sAEDCrRXPyJJP0Itn7s6OYPZ0pfuSqrLRx4MWmTWpha8ilEWZXxs2NAupo03e"},{"p":15,"s":"LBv3Vj9Ud1RE0OUK1kEoVw==","i":"1K7ETpygalDA7uEe","c":"skUbT21tB3GdZ8MKI3aKlpst986UyjMuH7PYXobXXw46JgOoWY64cC1kgJan7h/s"},{"p":16,"s":"coovjPx77pt+k3WHibKebA==","i":"7tOaaQqx8FtPSF/e","c":"1TIXcJzZRl3W8SRv3ENMdU9cK31KHJIXCmR2klUTqfugmjjD8qq4L83sWOoUaRKy"},{"p":17,"s":"ZorUa2rTRl8vy0/yRlX3Vw==","i":"/sVr8JQ7SbkCc3bk","c":"i2GnZKxs1Tgr46/IdwXbPQL48D2MfgWbxKJ4FR9Wefp16e0zwh2NgEwmwls5WN/P"},{"p":18,"s":"h/2TPjyYVyUxglr3SBGjAg==","i":"hPZJTV5ZLgnPUJKe","c":"ovy/d9tPVxNDuWM1SIPHGMhkGPNh1Y971nv7E3/MH5u3mStAew27KoW4XIpCj/rs"},{"p":19,"s":"pg9sim5J9g4YWisw2j+k+w==","i":"bjlXMbilnUvU73dQ","c":"ek2Z3wWSN8pEukMmag3dtu2GPsGIX1NMar88lWYI2r1KWEYPGgg3qIr2bnkuzuv0"},{"p":20,"s":"+pkUhW41DcSEuF9j0Qf8Tw==","i":"Z+EuNvcOdwGtMeFb","c":"QO4Gx85wrLvb+UyYEQFLUSYfV/1sJd8Tn6ALikfmlqfC0qigw6iHrO8eoPzTCKVO"},{"p":21,"s":"MedyjhIfXdvOCm60jV7GaA==","i":"f8YNQ4XtEeDhhrlG","c":"1/i994b5iggq82SMXwgHH+l49uYcd8ztBux/scnhPBx6zBat8AUN3b0i8M+aTxyJ"},{"p":22,"s":"xeeNYf/WJWE8uIVZKtQ5WA==","i":"/S1VgU7muvk3V8l+","c":"flsOhqwKynoSs/5TMgyZmpWV0HuzF0bJniWNNj4sxTgPNelU41xIR1WT0GQ1vYab"},{"p":23,"s":"yu0bbF9qDBm8dR/2057eNg==","i":"fyJ6vhCM2flgf6tN","c":"XhwJ/hKQwXvW+8/OPdrVqx6ejszhk2c8qpOAaXvMFzt/uICurIjGT1ro6tmTcSec"},{"p":24,"s":"PlqAi8vYZkKVfqRQ/zy82A==","i":"7FRB25etExR5pzTv","c":"9SgXrvtgcIK13bxvJR4IHpqAaC+fdeM2sclzOPhn45m89smHtpdHZx2zKZfyZ/4a"},{"p":25,"s":"lUr4JQuqopf9k1OeBI56cA==","i":"w9LYYtwfS8wdbsu4","c":"8qmnz2l06jAJyxAlrYBwrHJkAQlM7jIoRVbPsqf4kd5GfkRCZqbc17qvWiIfKOhz"}]}</script>
+<script id="wr" type="application/json">{"n":200000,"w":[{"p":1,"s":"pYYiCozGQgELwozleY4MJw==","i":"Ssi1sdsSYSRcaGaD","c":"qhEZkHlS4wgEWoXExsiGM05LY3kUtrd7SlkCQ9JJuDwtLTsagJ33dPjR6YuK+L48"},{"p":2,"s":"SRA1j33MxGohvdAdStVhyA==","i":"LSR7/ApG++BJwDCK","c":"FGwUBXaHjTZyE8fmbVU+vHOndHm5Rop1zXBvKh6wPu7P9vYV6Z0S4ci68W8FtB7c"},{"p":3,"s":"s8AfkyOl9JUW0PiIrTISgg==","i":"cWJbJPoohIaKPgHw","c":"1CyvuNPpSXTMevTkJ5W1vcQ+vucPJCzym3OgUFBvO5iBiDSHRa+aUdCwtKfW2WN3"},{"p":4,"s":"gsl0MEhpPgCukDH7wNiAmA==","i":"mcQnb/X2INrHZRbw","c":"A6KcBgkK7LYrjMzEwRwJKKkZrj1q7dXuAhYlB5bbXmfn3ZFnFYTzn0la2iv4m7+w"},{"p":5,"s":"j5PluzGJbxzpV6XkoKvxzg==","i":"xweTE79y2vt9B4P1","c":"/Lgw9oIuvD5DwuunCqfUio778nXkCTDnpHVUeBC7RBhPo2F3gi5DQdIeoJV38Bo2"},{"p":6,"s":"RbgYG3oepEMfK80LP1fCbA==","i":"ck8A244N5lQdb+BO","c":"F7XRRPyrqLgISnx5Og8R0jD2PTe0TAjuJfLVYAaFQA66HWrt8Xlku0LPnkDaL1Zz"},{"p":7,"s":"LBO8USTWLBq1jbYBY2OIeg==","i":"mZekScpdeZQncKnD","c":"n0ZetChrQERimmFaTTX+8ictV/H0ZwjEETF+X4osxw+OQswfrtWKnlDzg97waJdJ"},{"p":8,"s":"Ui88o8y4Kl5Op8fURoDEsA==","i":"lGjtdEui90H8GIgt","c":"Djz43/OebAr4LV+hn/UEJvX2FF/epHIS1vJ/6IsYokBgZzsTYBxnGjjYYxTh+g9p"},{"p":9,"s":"om7fhfOyiZNaN1vWgYOBHQ==","i":"iprvV4whLPBY6rYb","c":"OQ70nsPYrtgwCOOtQagDfEewt7alt5z/Z8c4RAIEcy1O3YT/OsliW53HBTjnH+Ug"},{"p":10,"s":"lrWtHp58+uBS9zIjp090OA==","i":"ubO2C0l/sYVZ+xjY","c":"GGoPg9E2NS/9MhXZyKs25SttB2u4aELVTqNypfFoQWYkvMvcLklHeFKHOwWpgYdJ"},{"p":11,"s":"BQ5Zv6PkyTzA8O9R+MmaJg==","i":"ak+lGvOBZe4ZmZMZ","c":"mKvU5IOcJr0nra5w7IgBQzeQLw2T2Mf0v0ajSJHeSG3bHnO89FWc/LVz+bUQsk8o"},{"p":12,"s":"5tjl0EY8NqzhG+sjk3qhrg==","i":"wWd0eVkJtunluSrW","c":"Icw43TMAzGW62XaA6ICAZb/+eIdgEgpZbbfO2vEqLqEOmqOLhzQjIyn2f7rRYx4E"},{"p":13,"s":"569+pOhi0xpnsovmt9r6IA==","i":"7ULcahBdmcyi9y5I","c":"0hWVD/iOW35zZA2yz8rsVfBbCiVgngmZhzOw8lszC2eBgJzatZG9Sz1ZHT+5K5CK"},{"p":14,"s":"sDt19Xyu0nFdKYymgTB/MA==","i":"jM9lMSR8js21+q2I","c":"NL97OU3iI+btYW/3E8tw/11wTzZSN37ohsv8zsZQJvWogEkQHMMUpPcGzFekZzxS"},{"p":15,"s":"cV7CIQiaplQvQoTuQnI2Mg==","i":"HTzSoQfqPepnIZRG","c":"V99DddilEbqW+aVB5u2kPBg9RdtOOCuYeyF10tIlYu0PX1qMowVOaLPJXF5RPO+C"},{"p":16,"s":"41G3+qy91itus7Qw5PD2kg==","i":"XRKQvOtyKtD0AAUx","c":"+MTuLgs6CxuyF+kopSOVwF1m4NmOUcONwU8bYUVx3snB7gAI/pooqkwi0rNdRNtE"},{"p":17,"s":"wpu5vzgDyh4+7EbbAID/Zw==","i":"WZ9mALDuW3PQH60b","c":"iAmt0nUbzVzCcLkNzA0oQO6e4nvX3S3hJW9nddJIdhqSyogWKnAmOn3o+KrykH8S"},{"p":18,"s":"laQIXnYIO4+InietTZ3a5g==","i":"fGV0u0joQdzSfq6M","c":"qXGV02Ble+Te693ZZN52tNPEjvddC1CGUWUlc0SSurtudfJNO/wnJNUQcGuTdJSL"},{"p":19,"s":"nUMZYURpeg8+2hI8ZROf8Q==","i":"NZ1ehtd0zHoFQlQF","c":"Bk4x0P8KmVhYvWFwD1s0fcEKTFekAmRsQ3Wvpmi14F41YsuQI/w3uln/hXY1VX9M"},{"p":20,"s":"MlhxvBVAfXjpedr/X5i4DA==","i":"i+4QISpvbSxwzPwB","c":"MOdlCvO9iW76zUpXbcWsgO9tM7iTDXzr1DGH6EescWaK78mZ7rEJqq/MiXxInnkU"},{"p":21,"s":"aIhkILluPIVKo9MFjBSpZw==","i":"cuDmwcU62d3I0lDn","c":"Epyrg4FwMJO7HzZII/6jHisXC2aPBBJspAprss97exWs69hVFh2lIqHIl5VruXru"},{"p":22,"s":"teTZYmSp//PD0NfS1uqj+g==","i":"RYigfiahAqij6teg","c":"Md5ZwJ/GnA6Q5TlivqZx/nb3+ajL5gAQebf6RScJxCRmVdiDN7vjg0CDLZk2XTTY"},{"p":23,"s":"8i+1krH+V5vD7E0eJb8HVQ==","i":"JU/XXdd+LghS4guk","c":"aHxhSTucdw5SybhzEqJHMR8x7usJKOVuG8/E3PIZCiNzmMoUGf+WM+cdczlhXrK8"},{"p":24,"s":"9yilwVNsnU1QcBqQMU7LtQ==","i":"CFTsJF9rR0OylSGE","c":"EP8wptgrVpM1AdsKPa+ZbfudqhXpWtQVxVHQVVV413s0ZWS1XdOK7DARcb9HwqUq"},{"p":25,"s":"9SgqUrGtZkMLQdvuGa6hAQ==","i":"GV3Lnhw2b6tFkM+K","c":"/DHZmDdPlPxCPYeuaYzX/R0SuBEvBnLCK3PCpHo5i3K/GvLFp+3u6Fw0CaOeeKau"}]}</script>
 <script>
 (function(){
 var Q=window.__QB=window.__QB||{pw:null,ok:{},files:null,shell:null,ready:null};
@@ -163,9 +183,29 @@ $('#lform').addEventListener('submit',function(e){
   },function(){$('#lerr').textContent='Gagal muat data. Cuba refresh halaman.';}).then(function(){$('#pwb').disabled=false;$('#pwb').textContent='Buka';});
 });
 function menu(){show('s-menu');}
+/* ---- promo reminder (auto-hilang ikut tarikh MYT) ---- */
+var PROMO=[
+ {to:'Great Eastern Takaful',n:'i-Great Chinta',to_:'2026-11-30',pts:['Coverage serendah <b>RM500k</b>','Sehingga <b>30 November 2026</b>']},
+ {to:'PruBSN Takaful',n:'Hospital Cash Benefit',from:'2026-11-15',to_:'2026-12-31',pts:['Untuk <b>AnugerahMax</b> &amp; <b>Asas360</b>','Permohonan baru: <b>15 Nov \u2013 31 Dis 2026</b> sahaja','Pilih <b>1\u20138 unit</b>, RM50 seunit sehari']},
+ {to:'PruBSN Takaful',n:'WarisanGold',to_:'2026-12-31',tag:'Akan withdraw',pts:['Akan ditarik balik (withdraw)','Boleh submit sehingga <b>31 Dis 2026</b>']}
+];
+function promo(){
+  var t=new Date(Date.now()+8*3600e3).toISOString().slice(0,10),h='',last='',n=0;
+  PROMO.forEach(function(p){
+    if(t>p.to_||(p.from&&t<p.from))return;
+    var d=Math.round((Date.parse(p.to_+'T00:00:00Z')-Date.parse(t+'T00:00:00Z'))/864e5);
+    var bd=d<=0?'Hari terakhir':(d<=14?'Tinggal '+d+' hari':'');
+    if(p.to!==last){h+='<div class="pto">'+p.to+'</div>';last=p.to;}
+    n++;
+    h+='<div class="pit"><div class="pn"><span>'+n+'. '+p.n+'</span>'+(p.tag?'<span class="bd">'+p.tag+'</span>':(bd?'<span class="bd hot">'+bd+'</span>':''))+'</div><ul>'+p.pts.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div>';
+  });
+  if(!n){menu();return;}
+  $('#pbody').innerHTML=h;$('#pbody').scrollTop=0;show('s-promo');
+}
+$('#pgo').onclick=menu;
 function tnc(){$('#tcok').checked=false;$('#tcgo').disabled=true;$('#tcb').scrollTop=0;show('s-tnc');}
 $('#tcok').onchange=function(){$('#tcgo').disabled=!this.checked;};
-$('#tcgo').onclick=function(){if($('#tcok').checked)menu();};
+$('#tcgo').onclick=function(){if($('#tcok').checked)promo();};
 $('#tcno').onclick=function(){Q.pw=null;Q.ok={};$('#tcok').checked=false;show('s-lock');setTimeout(function(){$('#pw').focus()},50);};
 document.querySelectorAll('.opt').forEach(function(b){b.onclick=function(){
   var k=b.dataset.k;
