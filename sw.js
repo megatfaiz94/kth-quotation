@@ -1,6 +1,6 @@
 /* Service worker: cache app shell supaya buka laju & boleh offline. Tukar VERSION bila update fail. */
-const VERSION = 'kth-qb-v7';
-const CORE = ['./', './index.html', './hibah.html', './medical.html', './manifest.webmanifest',
+const VERSION = 'kth-qb-v8';
+const CORE = ['./', './index.html', './hibah.html', './medical.html', './travel.html', './manifest.webmanifest',
   './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png'];
 
 self.addEventListener('install', e => {
