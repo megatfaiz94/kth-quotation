@@ -1,5 +1,5 @@
 /* Service worker: cache app shell supaya buka laju & boleh offline. Tukar VERSION bila update fail. */
-const VERSION = 'kth-qb-v9';
+const VERSION = 'kth-qb-v10';
 const CORE = ['./', './index.html', './hibah.html', './medical.html', './travel.html', './mymabrur.html', './manifest.webmanifest',
   './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png'];
 
